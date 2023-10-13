@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: Raleway, sans-serif;
+  --accent-font: "STIX Two Text", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0;
+  font-family: var(--main-font, Raleway, sans-serif);
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.heading {
+  font-family: var(--accent-font, "STIX Two Text", serif);
+  font-weight: 600;
+  text-align: center;
+  line-height: 0.9;
+}
+
+.content-section {
+  padding-inline-start: 5vi;
+  padding-inline-end: 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-block-end: 40px;
+}
+
+.content-title {
+  font-size: 30px;
+  margin-block-start: 7%;
+  margin-block-end: 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-block-end: 1.5em;
+}
+
+.content__link {
+  color: inherit;
+}
+
+.content__blockquote {
+  display: block;
+  width: 75%;
+  margin-block-end: 1.5em;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.content__list {
+  list-style: none;
+  padding-inline-start: 40px; /* Сомнительно */
+}
+
+.content__list li {
+  display: flex;
+  gap: 10px;
+}
+
+.content__list li::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/marker-light.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  align-self: center;
+  flex-shrink: 0;
+}
